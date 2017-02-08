@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<head>
+	<title>Web Enquiries</title>
+	
+	<!-- Material Design Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	
+	<!-- Bootstrap core CSS -->
+    <link href="waynescss/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="waynescss/mdb.css" rel="stylesheet">
+
+    <!-- Template styles -->
+    <link href="waynescss/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!--Body-->
+	<div class="container">
+
+	<div id="inner-header" class="wrap clearfix">
+
+
+
+		<!-- to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> -->
+
+		<div id="logo"><a href="#top" rel="nofollow"><img src="images/dt_logo_small_2016.png"></a></div>
+
+      	</div>
+
+<!-- end #inner-header -->
+
+
+<!--Form-->
+<form id="myform" role="form" method="post" action="mFormMail\test.php">
+								
+	<input type="hidden" name="tag" value="register">
+								
+	<div class="input-field">
+	<i class="material-icons prefix">person</i>
+	<input id="name" type="text" class="validate" name="yourname" required>
+	<label for="name">Your Name</label>
+	</div>
+
+	<div class="input-field">
+	<i class="material-icons prefix">email</i>
+	<input id="email" type="email" class="validate" name="youremail" required>
+	<label for="email">Your Email</label>
+	</div>
+
+	<div class="input-field">
+	<i class="material-icons prefix">phone</i>
+	<input id="number" type="tel" class="validate" name="yournumber" required>
+	<label for="number">Your Number</label>
+	</div>
+					
+	<div class="text-center">
+	<input type="button" value="submitForm" id="submitForm" class="btn btn-primary btn-lg waves-effect waves-light">Keep Me Informed</button>									
+	</div>
+
+</form>
+
+<!--/.Form-->
+</div>
+<!--/.Body-->
+
+<script>
+
+	$(document).ready(function() {
+    $("#submitForm").submit(function(e) {
+        e.preventDefault();
+        alert("Form submitted");
+    });
+});
+
+</script>
+
+</body>
+
+</html>
